@@ -1,6 +1,8 @@
 pipeline {
     agent any
     environment {
+        JENKINS_HOME = '/var/lib/jenkins'
+        CUSTOM_WORK_DIR = "${JENKINS_HOME}/custom-workspace"
         GIT_REPO = 'https://github.com/your-org/kafka-pipeline-demo.git'
         PRODUCER_SCRIPT = 'producer.py'
         CONSUMER_SCRIPT = 'consumer.py'
